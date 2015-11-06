@@ -7,6 +7,17 @@ class Expense{
   float total;
   color c;
   
+  Expense(String line)
+  {
+    String[] elements = line.split("\t");
+    name = elements[0];
+    party = elements[1];
+    constituency = elements[2];
+    returned = Float.parseFloat(elements[3]);
+    claimed = Float.parseFloat(elements[4]);
+    total = claimed - returned;
+  }
+  
   Expense()
   {
     name = "";

@@ -17,15 +17,9 @@ void loadExpenses()
   
   for(String line: lines)
   {
-    String[] elements = line.split("\t");
-    Expense expense = new Expense();
-    expense.name = elements[0];
-    expense.party = elements[1];
-    expense.constituency = elements[2];
-    expense.returned = Float.parseFloat(elements[3]);
-    expense.claimed = Float.parseFloat(elements[4]);
-    expense.total = expense.claimed - expense.returned;
+    Expense expense = new Expense(line);
     expenses.add(expense);
+    
   }
   
 }
