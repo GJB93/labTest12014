@@ -16,6 +16,7 @@ class Expense{
     returned = Float.parseFloat(elements[3]);
     claimed = Float.parseFloat(elements[4]);
     total = claimed - returned;
+    c = color(random(255), random(255), random(255));
   }
   
   Expense()
